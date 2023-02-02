@@ -1,0 +1,4 @@
+set terminal wxt persist
+set dgrid3d 11 11
+splot 'C:\Users\HOME\source\repos\Interface\Interface\Graph.txt' with pm3d 
+pause -1
