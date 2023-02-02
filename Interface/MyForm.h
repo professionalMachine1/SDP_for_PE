@@ -777,7 +777,6 @@ namespace Interface {
 		
 	}
 
-
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		int n, m;
@@ -896,7 +895,6 @@ namespace Interface {
 
 	}
 
-
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		//Тестовая задача
@@ -904,14 +902,12 @@ namespace Interface {
 
 	}
 
-
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		//Основная задача
 		MainResData();
 
 	}
-
 
 	private: void OutToDataGrid1(string s)
 	{
@@ -986,7 +982,6 @@ namespace Interface {
 
 	}
 
-
 	private: void OutToDataGrid2(string s)
 	{
 		ifstream file(s), results("ResMain.txt");
@@ -1058,7 +1053,6 @@ namespace Interface {
 		file.close();
 	}
 	
-	
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 
 		//Заполнение верхней таблицы (тестовая задача)
@@ -1076,7 +1070,6 @@ namespace Interface {
 		}
 
 	}
-	
 	
 	private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 
@@ -1096,7 +1089,6 @@ namespace Interface {
 
 	}
 	
-
 	private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 
 		int n, m;
@@ -1122,17 +1114,16 @@ namespace Interface {
 			name = "Difference";
 			break;
 		}
-		FILE* gpipe = _popen("C:\\Users\\gnuplot\\bin\\gnuplot.exe -persist", "w");
+		FILE* gpipe = _popen("gnuplot\\bin\\gnuplot.exe -persist", "w");
 		fprintf(gpipe, "set terminal wxt persist\n");
 		fprintf(gpipe, "set palette rgbformulae 30,31,32\n");
 		fprintf(gpipe, s.c_str());
-		s = "splot 'C:\\Users\\HOME\\source\\repos\\Interface\\Interface\\Graph.txt' with pm3d title '";
+		s = "splot 'Graph.txt' with pm3d title '";
 		s += name + "'\n";
 		fprintf(gpipe, s.c_str());
 		_pclose(gpipe);
 
 	}
-	
 	
 	private: System::Void comboBox5_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 
@@ -1159,17 +1150,16 @@ namespace Interface {
 			name = "Difference";
 			break;
 		}
-		FILE* gpipe = _popen("C:\\Users\\gnuplot\\bin\\gnuplot.exe -persist", "w");
+		FILE* gpipe = _popen("gnuplot\\bin\\gnuplot.exe -persist", "w");
 		fprintf(gpipe, "set terminal wxt persist\n");
 		fprintf(gpipe, "set palette rgbformulae 30,31,32\n");
 		fprintf(gpipe, s.c_str());
-		s = "splot 'C:\\Users\\HOME\\source\\repos\\Interface\\Interface\\Graph.txt' with pm3d title '";
+		s = "splot 'Graph.txt' with pm3d title '";
 		s += name + "'\n";
 		fprintf(gpipe, s.c_str());
 		_pclose(gpipe);
 
 	}
-
 
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -1225,7 +1215,6 @@ namespace Interface {
 
 	}
 
-
 	private: void ChangeFile(string InicialData, string FinalData)
 	{
 		int n, m;
@@ -1260,13 +1249,11 @@ namespace Interface {
 		Final.close();
 	}
 	
-	
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 
 		ofstream file("Parametr.txt");
 		file << endl;
 	}
-	
 	
 	private: void TestResData()
 	{
@@ -1319,7 +1306,6 @@ namespace Interface {
 
 		MessageBox::Show(s, "Результаты решения тестовой задачи", MessageBoxButtons::OK);
 	}
-	
 	
 	private: void MainResData()
 	{
@@ -1375,7 +1361,6 @@ namespace Interface {
 		MessageBox::Show(s, "Результаты решения основной задачи", MessageBoxButtons::OK);
 	}
 	
-	
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		//Дополнительная справка для тестовой задачи
@@ -1398,7 +1383,6 @@ namespace Interface {
 		MessageBox::Show(s, "Сведения о невязках", MessageBoxButtons::OK);
 
 	}
-	
 	
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 
